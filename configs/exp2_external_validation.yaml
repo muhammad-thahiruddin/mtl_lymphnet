@@ -1,0 +1,26 @@
+# Experiment 2: Bidirectional external (cross-center) validation.
+# Center A's inner train/val split drives early stopping; Center B is
+# evaluated exactly once as the held-out external test set (and vice versa).
+mode: full
+img_size: 256
+backbone: tu-tiny_vit_5m_224.dist_in22k_ft_in1k
+pretrained: imagenet
+
+batch_size: 8
+num_epochs: 150
+lr: 0.0005
+weight_decay: 0.0001
+use_amp: true
+patience: 20
+label_smoothing: 0.05
+subset_fraction: 1.0
+
+n_folds: 5      # unused directly by external validation (single train/test split), kept for consistency
+val_fraction: 0.2
+seed: 42
+
+data_dir: dataset
+output_dir: outputs_v2
+
+loss_strategy: uncertainty
+w_seg: 0.5

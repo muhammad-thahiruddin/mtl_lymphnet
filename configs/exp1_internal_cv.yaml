@@ -1,0 +1,27 @@
+# Experiment 1: Main results -- internal 5-fold cross-validation
+# (Center 1 + Center 2), TinyViT-5M backbone, uncertainty-weighted MTL loss.
+# Multi-seed support (R1.6): pass --seeds 42,43,44 on the CLI to run 3 seeds.
+mode: full
+img_size: 256
+backbone: tu-tiny_vit_5m_224.dist_in22k_ft_in1k
+pretrained: imagenet
+
+batch_size: 8
+num_epochs: 150
+lr: 0.0005
+weight_decay: 0.0001
+use_amp: true
+patience: 20
+label_smoothing: 0.05
+subset_fraction: 1.0
+
+n_folds: 5
+val_fraction: 0.2
+seed: 42
+
+data_dir: dataset
+output_dir: outputs_v2
+
+# Experiment-level choices (read directly from YAML, not part of Config)
+loss_strategy: uncertainty
+w_seg: 0.5

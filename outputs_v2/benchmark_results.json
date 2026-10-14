@@ -1,0 +1,140 @@
+[
+  {
+    "device": "cpu",
+    "hardware": {
+      "platform": "Linux 6.12.90+",
+      "processor": "x86_64",
+      "cpu_count": 2,
+      "ram_gb": 33.659383808,
+      "gpu_name": null,
+      "gpu_mem_gb": null
+    },
+    "batch_size": 1,
+    "precision": "fp32",
+    "n_warmup": 10,
+    "n_reps": 100,
+    "include_preprocessing": false,
+    "mean_ms": 131.37331164980424,
+    "std_ms": 6.332960257401954,
+    "p50_ms": 130.9317764989828,
+    "p95_ms": 137.87311259984563,
+    "throughput_ips": 7.611896110723415,
+    "backbone": "TinyViT-5M",
+    "backbone_timm_key": "tu-tiny_vit_5m_224.dist_in22k_ft_in1k"
+  },
+  {
+    "device": "cuda",
+    "hardware": {
+      "platform": "Linux 6.12.90+",
+      "processor": "x86_64",
+      "cpu_count": 2,
+      "ram_gb": 33.659383808,
+      "gpu_name": "Tesla T4",
+      "gpu_mem_gb": 15.636037632
+    },
+    "batch_size": 1,
+    "precision": "fp32",
+    "n_warmup": 10,
+    "n_reps": 100,
+    "include_preprocessing": false,
+    "mean_ms": 11.432618589897174,
+    "std_ms": 0.7077096822573362,
+    "p50_ms": 11.197797999557224,
+    "p95_ms": 13.061693000418018,
+    "throughput_ips": 87.46902489021056,
+    "backbone": "TinyViT-5M",
+    "backbone_timm_key": "tu-tiny_vit_5m_224.dist_in22k_ft_in1k"
+  },
+  {
+    "device": "cpu",
+    "hardware": {
+      "platform": "Linux 6.12.90+",
+      "processor": "x86_64",
+      "cpu_count": 2,
+      "ram_gb": 33.659383808,
+      "gpu_name": null,
+      "gpu_mem_gb": null
+    },
+    "batch_size": 1,
+    "precision": "fp32",
+    "n_warmup": 10,
+    "n_reps": 100,
+    "include_preprocessing": false,
+    "mean_ms": 80.86135654993996,
+    "std_ms": 4.432740120360743,
+    "p50_ms": 80.55663850063866,
+    "p95_ms": 85.67747805045656,
+    "throughput_ips": 12.36684669496486,
+    "backbone": "MobileNetV3-Large",
+    "backbone_timm_key": "tu-mobilenetv3_large_100"
+  },
+  {
+    "device": "cuda",
+    "hardware": {
+      "platform": "Linux 6.12.90+",
+      "processor": "x86_64",
+      "cpu_count": 2,
+      "ram_gb": 33.659383808,
+      "gpu_name": "Tesla T4",
+      "gpu_mem_gb": 15.636037632
+    },
+    "batch_size": 1,
+    "precision": "fp32",
+    "n_warmup": 10,
+    "n_reps": 100,
+    "include_preprocessing": false,
+    "mean_ms": 8.888223090143583,
+    "std_ms": 0.5778402891694882,
+    "p50_ms": 8.739091001189081,
+    "p95_ms": 9.944881349656498,
+    "throughput_ips": 112.50842714658344,
+    "backbone": "MobileNetV3-Large",
+    "backbone_timm_key": "tu-mobilenetv3_large_100"
+  },
+  {
+    "device": "cpu",
+    "hardware": {
+      "platform": "Linux 6.12.90+",
+      "processor": "x86_64",
+      "cpu_count": 2,
+      "ram_gb": 33.659383808,
+      "gpu_name": null,
+      "gpu_mem_gb": null
+    },
+    "batch_size": 1,
+    "precision": "fp32",
+    "n_warmup": 10,
+    "n_reps": 100,
+    "include_preprocessing": false,
+    "mean_ms": 84.67984639995848,
+    "std_ms": 5.791254523278925,
+    "p50_ms": 83.98809549908037,
+    "p95_ms": 89.97517244824849,
+    "throughput_ips": 11.809185331735444,
+    "backbone": "EfficientNet-B0",
+    "backbone_timm_key": "tu-efficientnet_b0"
+  },
+  {
+    "device": "cuda",
+    "hardware": {
+      "platform": "Linux 6.12.90+",
+      "processor": "x86_64",
+      "cpu_count": 2,
+      "ram_gb": 33.659383808,
+      "gpu_name": "Tesla T4",
+      "gpu_mem_gb": 15.636037632
+    },
+    "batch_size": 1,
+    "precision": "fp32",
+    "n_warmup": 10,
+    "n_reps": 100,
+    "include_preprocessing": false,
+    "mean_ms": 9.549667730170768,
+    "std_ms": 0.5347750248560589,
+    "p50_ms": 9.412995001184754,
+    "p95_ms": 10.65522444932867,
+    "throughput_ips": 104.71568522124046,
+    "backbone": "EfficientNet-B0",
+    "backbone_timm_key": "tu-efficientnet_b0"
+  }
+]

@@ -1,0 +1,24 @@
+# Experiment 5: Ablation -- MTL loss weighting strategy comparison.
+# "Uncertainty" is reused from Experiment 1; Fixed (0.5/0.5), Fixed (0.7/0.3),
+# and DWA are trained fresh with the same folds/seed. Per-epoch weight
+# trajectories (R1.5) are recorded automatically for every strategy.
+mode: full
+img_size: 256
+backbone: tu-tiny_vit_5m_224.dist_in22k_ft_in1k
+pretrained: imagenet
+
+batch_size: 8
+num_epochs: 150
+lr: 0.0005
+weight_decay: 0.0001
+use_amp: true
+patience: 20
+label_smoothing: 0.05
+subset_fraction: 1.0
+
+n_folds: 5
+val_fraction: 0.2
+seed: 42
+
+data_dir: dataset
+output_dir: outputs_v2

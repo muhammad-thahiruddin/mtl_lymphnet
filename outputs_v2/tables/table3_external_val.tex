@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Bidirectional external validation results.}
+  \label{tab:external_val}
+  \begin{tabular}{lcccccccc}
+    \toprule
+    Scenario & Dice & IoU & HD95 & AUC & Acc & Sens & Spec & F1 \\
+    \midrule
+    Internal CV & 0.8911 & 0.8201 & 16.0029 & 0.9479 & 0.8983 & 0.8855 & 0.9105 & 0.8933 \\
+    C1 -> C2 & 0.8442 & 0.7702 & 23.4952 & 0.7049 & 0.6392 & 0.8537 & 0.4079 & 0.7107 \\
+    C2 -> C1 & 0.7784 & 0.6821 & 27.2227 & 0.8202 & 0.6667 & 0.8889 & 0.4848 & 0.7059 \\
+    MobileNetV3-Large_uncertainty_w0.5 [C1->C2] & 0.8596 & 0.7782 & 27.7569 & 0.8035 & 0.6962 & 0.8537 & 0.5263 & 0.7447 \\
+    MobileNetV3-Large_uncertainty_w0.5 [C2->C1] & 0.7562 & 0.6538 & 29.5312 & 0.8355 & 0.7 & 0.9136 & 0.5253 & 0.7327 \\
+    EfficientNet-B0_uncertainty_w0.5 [C1->C2] & 0.8517 & 0.7722 & 29.4169 & 0.7499 & 0.7152 & 0.9024 & 0.5132 & 0.7668 \\
+    EfficientNet-B0_uncertainty_w0.5 [C2->C1] & 0.7903 & 0.6838 & 28.8048 & 0.8022 & 0.7 & 0.9259 & 0.5152 & 0.7353 \\
+    TinyViT-5M_fixed_w0.5 [C1->C2] & 0.8672 & 0.787 & 22.259 & 0.7656 & 0.6772 & 0.8902 & 0.4474 & 0.7411 \\
+    TinyViT-5M_fixed_w0.5 [C2->C1] & 0.7771 & 0.6783 & 30.2341 & 0.8602 & 0.6722 & 0.9383 & 0.4545 & 0.7204 \\
+    TinyViT-5M_fixed_w0.7 [C1->C2] & 0.8929 & 0.8222 & 18.6601 & 0.7667 & 0.6772 & 0.8659 & 0.4737 & 0.7358 \\
+    TinyViT-5M_fixed_w0.7 [C2->C1] & 0.7764 & 0.6688 & 28.7222 & 0.8688 & 0.7222 & 0.9877 & 0.5051 & 0.7619 \\
+    TinyViT-5M_dwa_w0.5 [C1->C2] & 0.8908 & 0.827 & 16.5077 & 0.7426 & 0.6139 & 0.8171 & 0.3947 & 0.6872 \\
+    TinyViT-5M_dwa_w0.5 [C2->C1] & 0.7203 & 0.6027 & 38.9878 & 0.8786 & 0.7611 & 0.8889 & 0.6566 & 0.7701 \\
+    \bottomrule
+  \end{tabular}
+  \vspace{2pt}
+  \footnotesize{Additional rows are backbone/loss-strategy sweep configurations (see Bug B1, exp2_variants).}
+\end{table}

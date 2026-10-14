@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Ablation study: encoder backbone comparison.}
+  \label{tab:ablation_backbone}
+  \begin{tabular}{lccccc}
+    \toprule
+    Backbone & Params (M) & GPU (ms) & CPU (ms) & Dice & AUC \\
+    \midrule
+    TinyViT-5M (all seeds, n=15) & 7.62 & 11.1 & 134.5 & 0.8911 +/- 0.0224 & 0.9479 +/- 0.0269 \\
+    TinyViT-5M (primary, n=5) & 0.00 & nan & nan & 0.8971 +/- 0.0252 & 0.9431 +/- 0.0347 \\
+    \cmidrule(lr){1-6}
+    MobileNetV3-Large (n=5) & 6.93 & 8.9 & 71.3 & 0.8845 +/- 0.0111 & 0.9559 +/- 0.0341 \\
+    EfficientNet-B0 (n=5) & 5.92 & 10.2 & 80.6 & 0.8926 +/- 0.0080 & 0.9440 +/- 0.0319 \\
+    \bottomrule
+  \end{tabular}
+  \vspace{2pt}
+  \footnotesize{Proposed backbone reported with all seeds and primary seed for fair comparison.}
+\end{table}

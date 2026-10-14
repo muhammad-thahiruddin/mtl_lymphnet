@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Ablation study: MTL loss weighting strategies.}
+  \label{tab:ablation_loss}
+  \begin{tabular}{lcccc}
+    \toprule
+    Strategy & Dice & IoU & AUC & F1 \\
+    \midrule
+    Uncertainty (all seeds, n=15) & 0.8911 +/- 0.0224 & 0.8201 +/- 0.0306 & 0.9479 +/- 0.0269 & 0.8933 +/- 0.0380 \\
+    Uncertainty (primary, n=5) & 0.8971 +/- 0.0252 & 0.8260 +/- 0.0348 & 0.9431 +/- 0.0347 & 0.8947 +/- 0.0288 \\
+    \cmidrule(lr){1-5}
+    Fixed (0.5/0.5) (n=5) & 0.8816 +/- 0.0120 & 0.8065 +/- 0.0167 & 0.9584 +/- 0.0396 & 0.9008 +/- 0.0641 \\
+    Fixed (0.7/0.3) (n=5) & 0.8924 +/- 0.0155 & 0.8208 +/- 0.0210 & 0.9578 +/- 0.0357 & 0.9011 +/- 0.0485 \\
+    DWA (n=5) & 0.8762 +/- 0.0234 & 0.7956 +/- 0.0322 & 0.9438 +/- 0.0413 & 0.8747 +/- 0.0448 \\
+    \bottomrule
+  \end{tabular}
+  \vspace{2pt}
+  \footnotesize{Uncertainty (proposed) reported with all seeds and primary seed for fair comparison.}
+\end{table}

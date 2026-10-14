@@ -1,0 +1,29 @@
+# Base configuration shared across experiments.
+# Environment-specific fields (data_dir/output_dir/device/mode) are resolved
+# automatically by `mtl_lymphnet.env.setup_environment` unless overridden via
+# CLI flags (--data-dir/--output-dir/--mode).
+
+mode: debug            # 'debug' or 'full' (auto-detected from GPU if omitted via CLI)
+img_size: 256
+backbone: tu-tiny_vit_5m_224.dist_in22k_ft_in1k
+pretrained: imagenet
+
+batch_size: 8
+num_epochs: 3
+lr: 0.0005
+weight_decay: 0.0001
+use_amp: true
+num_workers: 0
+patience: 30
+label_smoothing: 0.05
+subset_fraction: 1.0
+
+# Cross-validation protocol (R1.1 fix): val_fraction carves out the inner
+# validation split used for early stopping; the outer test fold is only
+# touched once, for final reporting.
+n_folds: 5
+val_fraction: 0.2
+
+seed: 42
+data_dir: dataset
+output_dir: outputs_v2

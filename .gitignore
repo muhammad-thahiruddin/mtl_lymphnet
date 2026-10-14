@@ -1,0 +1,62 @@
+# Python & environment
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Legacy outputs & legacy monolithic notebook (excluded from public repository)
+outputs/
+notebooks/mtl-lymphnet_original.ipynb
+
+# Raw ultrasound images: respect LymphUS dataset distribution terms (see dataset/about_dataset.md)
+dataset/Center 1/
+dataset/Center 2/
+
+# Full experiment archive zips
+*.zip
+outputs_v2/*.zip
+
+# Trained model weights: available upon reasonable request (see outputs_v2/checkpoints/README.md)
+*.pt
+*.pth
+*.ckpt
+
+# TensorBoard logs & run event files
+*/runs/
+runs/
+*events.out.tfevents*
+
+# Large failure-case prediction binary cache (seg_overlay_failure_cases.png is retained)
+outputs_v2/failure_cases_analysis/*.pkl
+
+# Regenerated evaluation directory (scratch output from regenerate_corrected_tables_figures.py)
+outputs_v2/regenerated/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Test & tooling cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.out
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Internal manuscripts, reviewer responses, and internal project notes
+article/
+docs/
+.git-old-backup/

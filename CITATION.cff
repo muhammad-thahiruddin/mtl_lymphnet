@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use MTL-LymphNet in your research, please cite our article as below."
+title: "MTL-LymphNet: A Lightweight Multi-Task Learning Framework for Simultaneous Lymph Node Segmentation and Metastasis Classification in Thyroid Cancer Ultrasound"
+authors:
+  - family-names: "Thahiruddin"
+    given-names: "Muhammad"
+    affiliation: "Department of Mathematics, Universitas Annuqayah"
+    email: "muhammad.thahiruddin@ua.ac.id"
+  - family-names: "Wahyudi"
+    given-names: "Imam"
+    affiliation: "Department of Artificial Intelligence, Universitas Annuqayah"
+    email: "imamwahyudi@ua.ac.id"
+  - family-names: "Musthofa"
+    given-names: "Alfie Nuril"
+    affiliation: "Department of Mathematics, Universitas Annuqayah"
+    email: "alfie.nm@ua.ac.id"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Thahiruddin"
+      given-names: "Muhammad"
+    - family-names: "Wahyudi"
+      given-names: "Imam"
+    - family-names: "Musthofa"
+      given-names: "Alfie Nuril"
+  journal: "Ultrasonic Imaging"
+  title: "MTL-LymphNet: A Lightweight Multi-Task Learning Framework for Simultaneous Lymph Node Segmentation and Metastasis Classification in Thyroid Cancer Ultrasound"
+  year: 2026
+  publisher: "SAGE Publications"
+repository-code: "https://github.com/muhammad-thahiruddin/mtl_lymphnet"
+keywords:
+  - "multi-task learning"
+  - "thyroid cancer"
+  - "lymph node metastasis"
+  - "medical ultrasound"
+  - "segmentation"
+  - "classification"
+  - "TinyViT"
+license: "MIT"
